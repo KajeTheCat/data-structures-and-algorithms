@@ -7,4 +7,4 @@ The problem domain was to write a function called BinarySearch which takes in 2 
 ## Approach & Efficiency
 The goal of the project was to essentiall search sorted arrays using binary search until you found a target number. Our approach was to find the length of the array, cut it in half and check the index if it was greater, equal or less than the target.
 
--Teammate Marni Hager
+-Teammate Marni Hager 
