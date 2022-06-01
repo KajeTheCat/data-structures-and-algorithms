@@ -1,3 +1,6 @@
+from platform import node
+
+
 class Node:
     def __init__(self, value, next=None):
         self.value = value
@@ -37,8 +40,13 @@ class LinkedList:
         print(str)
         return str + "NULL"
 
-    def includes(self):
-        pass
+    def includes(self, val):
+        current = self.head
+        while current:
+            if current.value == val:
+                return True
+            current = current.next
+        return False
 
 class TargetError:
     pass
