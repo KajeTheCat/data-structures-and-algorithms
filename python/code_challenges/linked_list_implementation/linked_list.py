@@ -11,6 +11,16 @@ class LinkedList:
     def __init__(self, head=None):
         self.head = head
 
+    def __str__(self):
+        current = self.head
+        str = ''
+        while current:
+            # "{ a } -> { b } -> { c } -> NULL"
+            str += f'{{ {current.value} }} -> '
+            current = current.next
+        print(str)
+        return str + "NULL"
+
     def insert(self, value):
         node = Node(value)
         if self.head is not None:
@@ -18,9 +28,14 @@ class LinkedList:
         self.head = node
 
     def to_string(self):
-        if self.head is None:
-            return "Null"
-        
+        current = self.head
+        str = ''
+        while current:
+            # "{ a } -> { b } -> { c } -> NULL"
+            str += f'{ {current.value} } -> '
+            current = current.next
+        print(str)
+        return str + "NULL"
 
     def includes(self):
         pass
