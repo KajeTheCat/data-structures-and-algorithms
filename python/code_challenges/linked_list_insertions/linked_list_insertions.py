@@ -1,5 +1,8 @@
 
 
+from multiprocessing.sharedctypes import Value
+
+
 class Node:
     """
     Node class
@@ -30,11 +33,21 @@ class LinkedList:
         current.next = node
 
 
-    def insert_before(self, current, target):
+    def insert_before(self, value, current, target):
+        node = Node(value)
         current = self.head
         while current:
             if current.next == target:
+                current.next = value
+            else:
+                current = current.next
 
 
     def insert_after(self, value, target):
-        pass
+        node = Node(value)
+        current = self.head
+        while current:
+            if current == target:
+                current.next = node
+            else:
+                current = current.next
