@@ -1,8 +1,14 @@
 
 
 class Node:
-    def __init__(self, next = None):
+    """
+    Node class
+    """
+
+    def __init__(self,value, next = None):
         self.next = next
+        self.value = value
+
 
 class LinkedList:
     """
@@ -13,22 +19,22 @@ class LinkedList:
         self.head = head
 
 
-        def insert(self, value):
-            node = Node(value)
-            if self.head is not None:
-                node.next = self.head
+    def append(self, value):
+        node = Node(value)
+        if not self.head:
             self.head = node
+            return
+        current = self.head
+        while current.next:
+            current = current.next
+        current.next = node
 
 
-        def insert_before(self, value, target):
-            node = Node(value)
-            if self.head is not None:
-                node.next = self.head
-            self.head = node
+    def insert_before(self, current, target):
+        current = self.head
+        while current:
+            if current.next == target:
 
 
-        def insert_after(self, value, target):
-            node = Node(value)
-            if self.head is not None:
-                node.next = self.head
-            self.head = node
+    def insert_after(self, value, target):
+        pass
