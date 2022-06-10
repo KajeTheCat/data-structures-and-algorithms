@@ -48,5 +48,23 @@ class LinkedList:
             current = current.next
         return False
 
+    def kth_from_end(self, value):		
+        node = Node(value)
+        length=0
+        current = self.head
+        while current:
+            length += 1
+            current = current.next
+        length = length - value
+        while  length != 0:
+            length -= 1
+        current = current.next
+        return current.value
+
+
+
 class TargetError:
-    pass
+    try:
+        raise ValueError
+    except ValueError:
+        print("ValueError Exception!")
