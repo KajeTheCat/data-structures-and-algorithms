@@ -1,8 +1,8 @@
 # Table of Contents
 
-1. [array_reverse](python/array_reverse/README.md)
-2. [array_insert_shift](python/array_insert_shift/README.md)
-3. [array_binary_search](python/code_challenges/array_binary_search/README.md)
-4. [linked_list_implementation](python/code_challenges/linked_list_implementation/README.md)
-
-6. [linked_list_insertion](python/code_challenges/linked_list_insertions/README.md)
+- [array_reverse](python/array_reverse/README.md)
+- [array_insert_shift](python/array_insert_shift/README.md)
+- [array_binary_search](python/code_challenges/array_binary_search/README.md)
+- [linked_list_implementation](python/code_challenges/linked_list_implementation/README.md)
+- [linked_list_insertion](python/code_challenges/linked_list_insertions/README.md)
+- [linked_list_zip](python/code_challenges/linked_list_zip/README.md)
