@@ -21,7 +21,6 @@ class LinkedList:
             # "{ a } -> { b } -> { c } -> NULL"
             str += f'{{ {current.value} }} -> '
             current = current.next
-        print(str)
         return str + "NULL"
 
     def insert(self, value):
@@ -62,24 +61,30 @@ class LinkedList:
         return current.value
 
 
-def zip_lists(a, b):
-    if (a.head == None and b.head == None):
+def zip_lists(llist1, llist2):
+    if(llist1.head == None and llist2.head == None):
         raise TargetError
-    if (a.head == None and b.head):
-        return b
-    if (b.head == None and a.head):
-        return a
-    while (a and b):
-        if (a.next == None):
-            a.next = b
-            return a
-        elif (b.next == None):
-            b.next = a
-            return b
-        a.next = b
-        b.next = a.next
-    return a
+    if(llist1.head == None and llist2.head):
+        return llist2
+    if(llist1.head and llist2.head == None):
+        return llist1
 
+    current1 = llist1.head
+    current2 = llist2.head
+
+    while current1 and current2:
+
+        temp1 = current1.next
+        temp2 = current2.next
+
+        current2.next = temp1
+        current1.next = current2
+
+        current1 = temp1
+        current2 = temp2
+
+        llist2.head = current2
+    return llist1
 
 
 class TargetError(Exception):
@@ -89,3 +94,15 @@ class TargetError(Exception):
     def __str__(self):
         return self.message
 
+if __name__ == "__main__":
+    a = LinkedList()
+    b = LinkedList()
+    a.insert(2)
+    a.insert(1)
+    # a.insert(5)
+    b.insert('c')
+    b.insert('b')
+    b.insert('a')
+    print(a)
+    print(b)
+    print(zip_lists(a,b))
