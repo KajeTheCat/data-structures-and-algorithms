@@ -48,7 +48,7 @@ class LinkedList:
             current = current.next
         return False
 
-    def kth_from_end(self, value):		
+    def kth_from_end(self, value):
         node = Node(value)
         length=0
         current = self.head
@@ -62,9 +62,30 @@ class LinkedList:
         return current.value
 
 
+def zip_lists(a, b):
+    if (a.head == None and b.head == None):
+        raise TargetError
+    if (a.head == None and b.head):
+        return b
+    if (b.head == None and a.head):
+        return a
+    while (a and b):
+        if (a.next == None):
+            a.next = b
+            return a
+        elif (b.next == None):
+            b.next = a
+            return b
+        a.next = b
+        b.next = a.next
+    return a
 
-class TargetError:
-    try:
-        raise ValueError
-    except ValueError:
-        print("ValueError Exception!")
+
+
+class TargetError(Exception):
+    def __init__(self):
+        self.message = "Whatever"
+
+    def __str__(self):
+        return self.message
+
