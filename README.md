@@ -6,3 +6,4 @@
 - [linked_list_implementation](python/code_challenges/linked_list_implementation/README.md)
 - [linked_list_insertion](python/code_challenges/linked_list_insertions/README.md)
 - [linked_list_zip](python/code_challenges/linked_list_zip/README.md)
+- [stacks_and_queues](python/code_challenges/stacks_and_queues/README.md)
