@@ -4,9 +4,25 @@ class Queue:
     """
 
     def __init__(self):
-        # initialization here
-        pass
+        self.front = None
+        self.back = None
 
-    def some_method(self):
+    def enqueue(self):
         # method body here
         pass
+
+    def dequeue(self):
+        # method body here
+        pass
+
+    def peek(self):
+        if self.front:
+            return self.front.value
+        else:
+            raise InvalidOperationError
+
+    def is_empty(self):
+        if self.front:
+            return True
+        else:
+            return False
