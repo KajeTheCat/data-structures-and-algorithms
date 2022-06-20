@@ -43,9 +43,9 @@ class Stack:
 
     def is_empty(self):
         if self.top:
-            return True
-        else:
             return False
+        else:
+            return True
 
 
 if __name__ == "__main__":
@@ -53,4 +53,4 @@ if __name__ == "__main__":
     s.push(1)
     s.push(2)
     s.push(3)
-    print(s.top.value)
+    print(s)
