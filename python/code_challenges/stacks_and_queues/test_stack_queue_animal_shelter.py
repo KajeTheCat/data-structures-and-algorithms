@@ -1,8 +1,8 @@
 import pytest
-from code_challenges.stack_queue_animal_shelter import AnimalShelter, Dog, Cat
+from stack_queue_animal_shelter import AnimalShelter, Dog, Cat
 
 
-@pytest.mark.skip("TODO")
+# @pytest.mark.skip("TODO")
 def test_single_cat():
     shelter = AnimalShelter()
     cat = Cat()
