@@ -39,6 +39,21 @@ If pref is not "dog" or "cat" then return null.
 
 ![shelter](shelter.png)
 
+## bracket verification
+
+Write a function called validate brackets
+Arguments: string
+Return: boolean
+representing whether or not the brackets in the string are balanced
+
+## Approach
+
+worked in group whiteboard may be different than actual code. Aoife in particular helped me with my challenge.
+
+## White board 3
+
+![brackets](brackets.png)
+
 [ ] Top-level README “Table of Contents” is updated
 [ ] README for this challenge is complete
 [ ] Summary, Description, Approach & Efficiency, Solution
