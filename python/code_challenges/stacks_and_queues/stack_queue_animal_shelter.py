@@ -19,10 +19,10 @@ class AnimalShelter:
         node = Node(value)
         if self.front is None:
             self.front = node
-            self.back = node
+            self.rear = node
         else:
-            self.back.next = node
-            self.back = node
+            self.rear.next = node
+            self.rear = node
 
     def dequeue(self, value):
         current = self.front
@@ -30,28 +30,29 @@ class AnimalShelter:
         if self.front is None:
             raise InvalidOperationError
 
-        if value == 'cat':
-            first_cat = None
+        if value == 'cat' or value == 'dog':
+            first = None
             previous = None
-            if str(self.front.value) == 'cat' and self.rear is None:
-                first_cat = self.front
-                self.front = None
-                return first_cat
+            if str(self.front.value) == value:
+                first = self.front
+                self.front = self.front.next
+                return first.value
             while current:
                 previous = current
                 # print('hi ', type(current.value))
-                if str(current.next.value) == 'cat':
-                    first_cat = current.next
+                if str(current.next.value) == value:
+                    first = current.next
                     print(current)
-                    if str(self.front.value) == 'cat':
+                    if str(self.front.value) == value:
                         self.front = self.front.next
-                    elif str(self.rear.value) == 'cat':
+                    elif str(self.rear.value) == value:
                         current.next = None
                     elif current.next.next:
                         previous.next = current.next.next
                     break
                 current = current.next
-            return first_cat
+            return first.value
+        return None
 
 
 class Dog:
