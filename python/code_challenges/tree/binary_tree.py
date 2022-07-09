@@ -4,7 +4,6 @@ class BinaryTree:
     """
 
     def __init__(self):
-        # initialization here
         pass
 
     def pre_order(self):
@@ -63,6 +62,7 @@ class BinaryTree:
 
 
 class Node:
+
     def __init__(self, value,left = None, right = None):
         self.value = value
         self.left = left

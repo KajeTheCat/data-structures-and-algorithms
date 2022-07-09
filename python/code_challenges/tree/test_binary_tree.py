@@ -7,11 +7,11 @@ def test_exists():
     assert BinaryTree
 
 # @pytest.mark.skip("TODO")
-def test_node_exists()
+def test_node_exists():
     node = Node("apple")
-    assert node.value = "apple"
-    assert node.left = None
-    assert node.right = None
+    assert node.value == "apple"
+    assert node.left == None
+    assert node.right == None
 
 
 # @pytest.mark.skip("TODO")
