@@ -21,6 +21,19 @@ Contains
 Argument: value
 Returns: boolean indicating whether or not the value is in the tree at least once
 
+## challenge 2
+
+Write the following method for the Binary Tree class
+
+find maximum value
+Arguments: none
+Returns: number
+Find the maximum value stored in the tree. You can assume that the values stored in the Binary Tree will be numeric.
+
+## max value white board
+
+![max_tree](max_tree.png)
+
 [ ] Top-level README “Table of Contents” is updated
 [ ] README for this challenge is complete
 [ ] Summary, Description, Approach & Efficiency, Solution
