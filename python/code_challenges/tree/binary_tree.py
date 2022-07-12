@@ -3,8 +3,8 @@ class BinaryTree:
     Class for the pre_order, in_order, and post_order methods.
     """
 
-    def __init__(self):
-        pass
+    def __init__(self, root):
+        self.value = value
 
     def pre_order(self):
 
