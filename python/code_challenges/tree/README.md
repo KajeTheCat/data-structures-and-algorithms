@@ -34,6 +34,10 @@ Find the maximum value stored in the tree. You can assume that the values stored
 
 ![max_tree](max_tree.png)
 
+## breadth first whiteboard
+
+![breadth](breadth_first.png)
+
 [ ] Top-level README “Table of Contents” is updated
 [ ] README for this challenge is complete
 [ ] Summary, Description, Approach & Efficiency, Solution

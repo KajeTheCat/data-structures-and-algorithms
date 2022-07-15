@@ -1,14 +1,15 @@
 import pytest
-from data_structures.binary_tree import BinaryTree, Node
-from code_challenges.tree_breadth_first import breadth_first
+from binary_tree import BinaryTree, Node
+from tree_breadth_first import breadth_first
+from binary_search_tree import BinarySearchTree
 
 
-@pytest.mark.skip("TODO")
+# @pytest.mark.skip("TODO")
 def test_exists():
     assert breadth_first
 
 
-@pytest.mark.skip("TODO")
+# @pytest.mark.skip("TODO")
 def test_rootless_tree():
     tree = BinaryTree()
     expected = []
@@ -16,7 +17,7 @@ def test_rootless_tree():
     assert actual == expected
 
 
-@pytest.mark.skip("TODO")
+# @pytest.mark.skip("TODO")
 def test_single_node():
     tree = BinaryTree()
     tree.root = Node("apples")
@@ -25,7 +26,7 @@ def test_single_node():
     assert actual == expected
 
 
-@pytest.mark.skip("TODO")
+# @pytest.mark.skip("TODO")
 def test_two_nodes():
     tree = BinaryTree()
     tree.root = Node("apples")
@@ -35,7 +36,7 @@ def test_two_nodes():
     assert actual == expected
 
 
-@pytest.mark.skip("TODO")
+# @pytest.mark.skip("TODO")
 def test_four_nodes():
     tree = BinaryTree()
     tree.root = Node("apples")
@@ -47,7 +48,7 @@ def test_four_nodes():
     assert actual == expected
 
 
-@pytest.mark.skip("TODO")
+# @pytest.mark.skip("TODO")
 def test_example_from_reading():
     """
     We build these out by hand because the example has some gaps
@@ -90,3 +91,35 @@ def test_example_from_reading():
     actual = breadth_first(tree)
 
     assert actual == expected
+
+
+def test_tree_letters():
+    b = BinaryTree()
+    b.root = Node("a")
+    b.root.left = Node("b")
+    b.root.right = Node("c")
+    b.root.left.left = Node("d")
+    b.root.left.right = Node("e")
+    b.root.right.left = Node("f")
+    b.root.right.right = Node("g")
+    expected = ["a", "b", "c", "d", "e", "f", "g"]
+    actual = breadth_first(b)
+    assert actual == expected
+
+
+def test_bst():
+    b = BinarySearchTree()
+    b.add(9)
+    b.add(7)
+    b.add(5)
+    b.add(6)
+    b.add(10)
+    b.add(18)
+    b.add(14)
+    b.add(11)
+    b.add(2)
+    b.add(20)
+    expected = [9, 7, 10, 5, 18, 2, 6, 14, 20, 11]
+    actual = breadth_first(b)
+    assert actual == expected
+
