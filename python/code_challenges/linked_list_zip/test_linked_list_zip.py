@@ -86,3 +86,4 @@ def test_b_empty():
     for value in reversed([1, 2, 3]):
         expected.insert(value)
     assert str(actual) == str(expected)
+
