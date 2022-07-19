@@ -30,6 +30,10 @@ Arguments: none
 Returns: number
 Find the maximum value stored in the tree. You can assume that the values stored in the Binary Tree will be numeric.
 
+## challenge 3
+
+fizz buzz a k-ary tree
+
 ## max value white board
 
 ![max_tree](max_tree.png)
@@ -37,6 +41,10 @@ Find the maximum value stored in the tree. You can assume that the values stored
 ## breadth first whiteboard
 
 ![breadth](breadth_first.png)
+
+## fizzbuzztree
+
+![fizzbuzz](fizzbuzztrees.png)
 
 [ ] Top-level README “Table of Contents” is updated
 [ ] README for this challenge is complete
