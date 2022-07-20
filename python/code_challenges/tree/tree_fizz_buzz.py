@@ -1,9 +1,10 @@
 from binary_tree import BinaryTree
 from queue import Queue
 from kary_tree import Node
+import copy
 
 def fizz_buzz_tree(tree, Node = None):
-    new_tree = tree
+    new_tree = copy.deepcopy(tree)
     if not tree.root:
         return "no tree found"
 
