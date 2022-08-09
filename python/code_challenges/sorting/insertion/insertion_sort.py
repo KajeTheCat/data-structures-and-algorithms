@@ -6,11 +6,9 @@ def insertion_sort(arr):
             arr[j + 1] = arr[j]
             j = j - 1
         arr[j + 1]
-    print(arr)
     return arr
 
 
 if __name__ == "__main_":
     arr = [6,3,9,10,41,30,12]
     insertion_sort(arr)
-    print(arr)
