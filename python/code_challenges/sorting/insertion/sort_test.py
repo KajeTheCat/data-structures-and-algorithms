@@ -5,9 +5,13 @@ def test_exists():
     assert insertion_sort
 
 def test_sorted():
-    arr = [6,3,9,10,41,30,12]
+    assert insertion_sort([6,3,9,10,41,30,12]) == [3,6,9,10,12,30,41]
 
-    actual = insertion_sort(arr)
-    expected = insertion_sort(arr)
+def test_negative():
+    assert insertion_sort([-6,3,-9,10,41,-30,12]) == [-30,-9,-6,3,10,12,41]
 
-    assert actual == expected
+def test_empty():
+    assert insertion_sort([]) == []
+
+def test_dupes():
+    assert insertion_sort([1,2,2,2,1]) == [1,1,2,2,2]
