@@ -1,5 +1,3 @@
-hello = "world"
-
 class Node:
     """
     Node class
@@ -94,4 +92,4 @@ if __name__ == "__main__":
     #             current = current.next
     # print(h.get("ape"))
     # print(h.contains("ape"))
-    print(h.keys())
+    # print(h.keys())
