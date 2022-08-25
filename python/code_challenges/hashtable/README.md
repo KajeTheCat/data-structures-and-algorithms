@@ -18,3 +18,11 @@ space: depends on which method you use.
 3. contains: Returns: Boolean, indicating if the key exists in the table already.
 4. keys: Returns: Collection of keys
 5. hash: Returns: Index in the collection for that key
+
+## Hashtable repeated word
+
+A function that allows you to find the first repeated word in a string.
+
+## Challenge 2
+
+create a function that finds the first repeated word in a string.
