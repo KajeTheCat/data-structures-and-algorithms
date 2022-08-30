@@ -16,6 +16,7 @@ def first_repeated_word(string):
         if item != "":
             mid_list.append(item.replace("\n", ""))
 
+
     temp_list = Hashtable(1024)
 
     for words in mid_list:

@@ -1,14 +1,14 @@
 import pytest
-from code_challenges.tree_intersection import tree_intersection
-from data_structures.binary_tree import BinaryTree, Node
-from data_structures.queue import Queue
+from tree_intersection import tree_intersection
+from binary_tree import BinaryTree, Node
+from tree.queue import Queue
 
 
 def test_exists():
     assert tree_intersection
 
 
-@pytest.mark.skip("TODO")
+# @pytest.mark.skip("TODO")
 def test_tree_intersection():
 
     tree_a = BinaryTree()
@@ -23,6 +23,19 @@ def test_tree_intersection():
     expected = [125, 175, 100, 160, 500, 200, 350]
 
     assert sorted(actual) == sorted(expected)
+
+def test_empty():
+    tree_a = BinaryTree()
+    values = None
+    add_values_to_empty_tree(tree_a, values)
+    tree_b = BinaryTree()
+    values = None
+    add_values_to_empty_tree(tree_b, values)
+
+    actual = tree_intersection(tree_a, tree_b)
+    expected = None
+
+    assert actual = expected
 
 
 def add_values_to_empty_tree(tree, values):

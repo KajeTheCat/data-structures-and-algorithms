@@ -26,3 +26,15 @@ A function that allows you to find the first repeated word in a string.
 ## Challenge 2
 
 create a function that finds the first repeated word in a string.
+
+## Whiteboard c2
+
+![repeated](repeated.png)
+
+## Challenge 3
+
+Using your Hashmap implementation as a part of your algorithm, return a set of values found in both trees.
+
+## Whiteboard c3
+
+![]()
