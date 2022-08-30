@@ -1,10 +1,10 @@
-from binary_tree import BinaryTree,Node
-try:
-    from hashtable import Hashtable
-except:
-    from .hashtable import Hashtable
+from .binary_tree import BinaryTree, Node
+from .hashtable import Hashtable
+
 
 def tree_intersection(tree_a, tree_b):
+    if tree_a == None or tree_b == None:
+        return None
     ap = tree_a.pre_order()
     bp = tree_b.pre_order()
 
@@ -17,7 +17,7 @@ def tree_intersection(tree_a, tree_b):
             container.append(item)
         else:
             h._set(item, item)
-    return h
+    return container
 
 
 if __name__ == "__main__":

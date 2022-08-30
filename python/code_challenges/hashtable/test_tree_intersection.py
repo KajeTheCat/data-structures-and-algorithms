@@ -1,6 +1,7 @@
 import pytest
-from tree_intersection import tree_intersection
-from binary_tree import BinaryTree, Node
+from .tree_intersection import tree_intersection
+from .binary_tree import BinaryTree, Node
+from .hashtable import Hashtable
 from tree.queue import Queue
 
 
@@ -25,17 +26,26 @@ def test_tree_intersection():
     assert sorted(actual) == sorted(expected)
 
 def test_empty():
-    tree_a = BinaryTree()
-    values = None
-    add_values_to_empty_tree(tree_a, values)
+    tree_a = BinaryTree
+    tree_a = None
     tree_b = BinaryTree()
-    values = None
-    add_values_to_empty_tree(tree_b, values)
+    d = Node(3)
+    e = Node(4)
+    f = Node(5)
+    k = Node(9)
+    l = Node(6)
+    m = Node(2)
+    tree_b.root = d
+    tree_b.root.left = e
+    tree_b.root.right = f
+    tree_b.root.left.right = k
+    tree_b.root.left.left = l
+    tree_b.root.right.left = m
 
     actual = tree_intersection(tree_a, tree_b)
     expected = None
 
-    assert actual = expected
+    assert actual == expected
 
 
 def add_values_to_empty_tree(tree, values):

@@ -37,4 +37,4 @@ Using your Hashmap implementation as a part of your algorithm, return a set of v
 
 ## Whiteboard c3
 
-![]()
+![intersect](intersect.png)
