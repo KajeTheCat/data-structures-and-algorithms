@@ -1,5 +1,5 @@
 import pytest
-from code_challenges.hashtable_left_join import left_join
+from hashtable_left_join import left_join
 
 
 def test_exists():
