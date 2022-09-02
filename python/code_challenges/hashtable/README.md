@@ -44,3 +44,5 @@ Using your Hashmap implementation as a part of your algorithm, return a set of v
 create a function that takes in two hash maps and joins the values that exist in both.
 
 ![left_join](left_join.png)
+
+worked with marni and sergii
